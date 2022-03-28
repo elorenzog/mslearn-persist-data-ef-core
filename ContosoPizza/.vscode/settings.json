@@ -1,0 +1,11 @@
+{
+    "sqltools.connections": [
+        {
+            "previewLimit": 50,
+            "driver": "SQLite",
+            "database": "${workspaceFolder:ContosoPizza}/ContosoPizza.db",
+            "name": "PizzaDB"
+        }
+    ],
+    "sqltools.useNodeRuntime": true
+}

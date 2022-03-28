@@ -16,15 +16,15 @@ public class PizzaController : ControllerBase
     }
 
     [HttpGet]
-    public IEnumerable<Pizza> GetAll()
+    public async Task<List<Pizza>> GetAll()
     {
-        return _service.GetAll();
+        return await _service.GetAll();
     }
 
     [HttpGet("{id}")]
-    public ActionResult<Pizza> GetById(int id)
+    public async Task<ActionResult<Pizza>> GetById(int id)
     {
-        var pizza = _service.GetById(id);
+        var pizza = await _service.GetById(id);
 
         if(pizza is not null)
         {
